@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".PortfolioActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonsTableLayout"
+            android:stretchColumns="0,1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:id="@+id/imageButton"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/spotify"
+                        android:contentDescription="@string/streamer_button"
+                        android:onClick="launchSpotifyStreamer" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/streamer_button"
+                        android:id="@+id/textView"
+                        android:layout_marginLeft="80dp"
+                        android:textColor="@color/primary_material_dark"
+                        android:textSize="@dimen/abc_text_size_button_material"
+                        android:layout_gravity="left|center_vertical"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/duo_scores_button"
+                    android:id="@+id/duoScoresButton"
+                    android:layout_column="0"
+                    android:onClick="launchSuperDuoScores"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/duo_library_button"
+                    android:id="@+id/duoLibraryButton"
+                    android:layout_column="0"
+                    android:onClick="launchSuperDuoLibrary"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/build_bigger_button"
+                    android:id="@+id/buildBiggerButton"
+                    android:layout_column="0"
+                    android:onClick="launchBuildItBigger"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/reader_button"
+                    android:id="@+id/readerButton"
+                    android:layout_column="0"
+                    android:onClick="launchXYZReader"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/capstone_button"
+                    android:id="@+id/capstoneButton"
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:onClick="launchCapstone" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:clickable="false"
+                    android:contentDescription="@string/android_skateboard_image"
+                    android:src="@drawable/android_skateboard" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>
